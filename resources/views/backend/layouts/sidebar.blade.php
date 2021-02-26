@@ -31,7 +31,6 @@
                 </p>
               </a>
           </li>
-          @if ($data->type == 'super_admin' || $data->type == 'admin')
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fa fa-user text-orange"></i>
@@ -42,7 +41,7 @@
             </a>
             <ul class="nav nav-treeview" style="display: none; margin-left:20px;">
               <li class="nav-item" style="font-size: 15px;">
-                <a href="{{route('user.list')}}" class="nav-link">
+                <a href="/service" class="nav-link">
                   <i class="fa fa-check-circle nav-icon" aria-hidden="true"></i>
                   <p>User</p>
                 </a>
@@ -246,7 +245,6 @@
             </p>
           </a>
         </li>
-        @endif
         </ul>
       </nav>
     </div>

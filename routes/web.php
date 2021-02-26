@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('livewire.backend.layouts.app');
-});
+// Route::get('/', function () {
+//     return view('frontend.app');
+// });
 
-Route::get('/home', function () {
-    return view('livewire.frontend.layouts.home');
-});
+// Route::get('/service', function () {
+//     return view('livewire.backend.layouts.service.service');
+// });
+
+Route::get('/', \App\Http\Livewire\Home::class);
+Route::get('/service', \App\Http\Livewire\Service::class);
