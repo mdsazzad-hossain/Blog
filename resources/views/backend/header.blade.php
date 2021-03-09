@@ -7,6 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'E-commerce') }}</title>
+    <link rel="shortcut icon" href="#">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
     <link rel="stylesheet"http://code.ionicframework.com/1.3.3/css/ionic.min.css">
 
@@ -26,12 +27,12 @@
     {{-- <link rel="stylesheet" href="{{asset('backend/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}"> --}}
     <link rel="stylesheet" href="{{asset('backend/plugins/datatables-bs4/css/dataTables.bootstrap4.css')}}">
     <link rel="stylesheet" href="{{asset('backend/plugins/select2/css/select2.min.css')}}">
-
+    <link rel="stylesheet" href="{{asset('backend/plugins/sweetalert2/sweetalert2.min.css')}}">
 
     @yield('css')
 </head>
 <body class="hold-transition sidebar-mini">
-@include('sweetalert::alert')
+
 <div class="wrapper">
 
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
@@ -148,13 +149,14 @@
               <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
             </div>
           </li> --}}
+
           <li class="nav-item dropdown">
             <a class="nav-link" data-toggle="dropdown" href="#">
-              <i class="fas fa-sign-out-alt"></i>
+              <i style="color:red;" class="fas fa-power-off"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-            <a href="{{route('logout')}}" class="dropdown-item">
-                <i class="fas fa-sign-out-alt"></i> Logout
+            <div class="dropdown-menu dropdown-menu-right">
+            <a href="#" class="dropdown-item">
+               Logout <i style="float: right; padding-top:5px;" class="fas fa-sign-out-alt"></i>
               </a>
             </div>
           </li>

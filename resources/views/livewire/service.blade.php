@@ -16,13 +16,13 @@
 
                 <div class="collapse navbar-collapse" id="navbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="index.html">Home</a></li>
+                        <li class="active"><a href="/">Home</a></li>
                         <li class="dropdown dropdown-toggle"> <a href="#" data-toggle="dropdown">Products <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="demo.html">Demo</a></li>
                             </ul>
                         </li>
-                        <li> <a href="services.html">Services</a>
+                        <li> <a href="/service">Services</a>
 
                         </li>
                         <li> <a href="about-us.html">About Us</a>

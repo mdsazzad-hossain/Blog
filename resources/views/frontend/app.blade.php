@@ -203,6 +203,33 @@
             padding-left: 25px;
             background: #fff !important;
         }
+        .title-left {
+            text-align: left !important;
+            margin: 20px 0px 6px !important;
+        }
+
+        .title-left h2 {
+            color: #01b1d7;
+            font-size: 30px !important;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .title-right {
+            text-align: right !important;
+            margin: 20px 0px 6px !important;
+        }
+
+        .title-right h2 {
+            color: #01b1d7;
+            font-size: 30px !important;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .service {
+            margin-bottom: 10px !important;
+        }
     </style>
     @livewireStyles
 </head>

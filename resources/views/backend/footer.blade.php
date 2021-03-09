@@ -30,20 +30,31 @@
 <script src="{{ asset('backend/plugins/moment/moment.min.js')}}"></script>
 <script src="{{ asset('backend/plugins/daterangepicker/daterangepicker.js')}}"></script>
 <script src="{{ asset('backend/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
-<script src="{{ asset('backend/plugins/summernote/summernote-bs4.min.js')}}"></script>
+{{-- <script src="{{ asset('backend/plugins/summernote/summernote-bs4.min.js')}}"></script> --}}
 <script src="{{ asset('backend/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
 <script src="{{ asset('backend/dist/js/adminlte.js')}}"></script>
-{{-- <script src="{{ asset('backend/dist/js/pages/dashboard.js')}}"></script> --}}
-{{-- <script src="{{ asset('backend/dist/js/demo.js')}}"></script> --}}
-<script src="{{ asset('backend/dist/js/dropzone.js')}}"></script>
+<script src="{{ asset('backend/dist/js/jqvalidation.js')}}"></script>
 <script src="{{ asset('backend/plugins/datatables/jquery.dataTables.js')}}"></script>
 <script src="{{ asset('backend/plugins/datatables-bs4/js/dataTables.bootstrap4.js')}}"></script>
 <script src="{{ asset('backend/plugins/select2/js/select2.full.min.js')}}"></script>
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="{{ asset('backend/plugins/sweetalert2/sweetalert2.min.js')}}"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+<script src="{{ asset('backend/dist/js/validate.js')}}"></script>
 
-
+<script>
+  const Toast = Swal.mixin({
+        toast: true,
+        position: 'top-end',
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer)
+            toast.addEventListener('mouseleave', Swal.resumeTimer)
+        }
+    })
+</script>
 @yield('js')
-
 </body>
 
 </html>
