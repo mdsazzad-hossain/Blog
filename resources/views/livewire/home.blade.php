@@ -176,10 +176,16 @@
                         @php $i++; @endphp
                         <li class="{{ $i==1 ? "active" :'' }}"><a href="#tab_{{ $i }}" data-toggle="tab">{{ $demo->get_category->title }}</a></li>
                         @endforeach
-                        <li><a href="#tab_2" data-toggle="tab">Tab 2</a></li>
                     </ul>
                     <div class="tab-content row">
-                        <div class="col-md-12 tab-pane active" id="tab_1">
+                        @php
+                            $i=0;
+                        @endphp
+                        @foreach ($demos as $demo)
+                        @php
+                            $i++;
+                        @endphp
+                        <div class="col-md-12 tab-pane {{ $i==1?"active":'' }}" id="tab_{{ $i }}">
 
                             <div class=" col-md-6 tab-content-part">
                                 <h2>Tech Solution</h2>
@@ -190,23 +196,11 @@
                             </div>
                             <div class="col-md-6">
                                 <figure>
-                                    <img class="tab-figure" src="D:\idea\sbtechnosoft.com\edugrowth\images\world.gif " alt=" ">
+                                    <img height="250px" class="tab-figure" src="{{ asset('/images/'.$demo->image) }}" alt=" ">
                                 </figure>
                             </div>
                         </div>
-                        <div class="col-md-12 tab-pane" id="tab_2">
-
-                            <div class="col-md-6 tab-content-part">
-                                <h2>Testing</h2>
-                                <p>Exactly like the original bootstrap tabs except you should use the custom wrapper. A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
-                                    I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend</p>
-                            </div>
-                            <div class="col-md-6">
-                                <figure>
-                                    <img class="tab-figure" src="D:\idea\sbtechnosoft.com\edugrowth\images\Customized-Software-Development.gif " alt=" ">
-                                </figure>
-                            </div>
-                        </div>
+                        @endforeach
                         <!-- /.tab-pane -->
                     </div>
                     <!-- /.tab-content -->
