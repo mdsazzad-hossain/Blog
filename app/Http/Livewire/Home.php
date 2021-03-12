@@ -10,7 +10,7 @@ class Home extends Component
     public function render()
     {
         $this->data = auth()->user();
-        $this->demos = Demo::all();
+        $this->demos = Demo::with('get_category')->get();
         return view('livewire.home')->extends('frontend.app')
         ->section('content');
     }

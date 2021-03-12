@@ -171,21 +171,12 @@
                 <!-- Custom Tabs -->
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#tab_1" data-toggle="tab">Tab 1</a></li>
+                        @php $i=0; @endphp
+                        @foreach ($demos as $demo)
+                        @php $i++; @endphp
+                        <li class="{{ $i==1 ? "active" :'' }}"><a href="#tab_{{ $i }}" data-toggle="tab">{{ $demo->get_category->title }}</a></li>
+                        @endforeach
                         <li><a href="#tab_2" data-toggle="tab">Tab 2</a></li>
-                        <li><a href="#tab_3" data-toggle="tab">Tab 3</a></li>
-                        <li><a href="#tab_3" data-toggle="tab">Tab 3</a></li>
-                        <li><a href="#tab_3" data-toggle="tab">Tab 3</a></li>
-                        <li><a href="#tab_3" data-toggle="tab">Tab 3</a></li>
-                        <li class="dropdown">
-                            <ul class="dropdown-menu">
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                                <li role="presentation" class="divider"></li>
-                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-                            </ul>
-                        </li>
                     </ul>
                     <div class="tab-content row">
                         <div class="col-md-12 tab-pane active" id="tab_1">
